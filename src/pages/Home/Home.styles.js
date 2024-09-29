@@ -27,11 +27,11 @@ export const HeroSubtitle = styled.p`
 `;
 
 export const CTAButton = styled.button`
-  background-color: #0066cc;
-  color: #fff;
+  background-color: #EFEFEF;
+  color: #1C1C1C;
   border: none;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
+  padding: 10px 16px 11px;
+  font: 16px Roboto, sans-serif;
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease;
