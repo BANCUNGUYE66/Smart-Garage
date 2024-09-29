@@ -14,6 +14,24 @@ export const HeroSection = styled.section`
   justify-content: center;
   text-align: center;
   padding: 4rem 2rem;
+  position: relative;
+
+  background-image: url('https://vwcentral.com.au/media/catalog/product/cache/1/thumbnail/700x/17f82f742ffe127f42dca9de82fb58b1/p/r/pro-pack-5.jpg'); 
+  background-position: center;
+  background-size: cover; 
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(135, 206, 235, 0.6); 
+    backdrop-filter: blur(1px);
+    z-index: -1;
+  }
 `;
 
 export const HeroTitle = styled.h1`
@@ -35,6 +53,7 @@ export const CTAButton = styled.button`
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+
   &:hover {
     background-color: #0052a3;
   }
@@ -47,11 +66,12 @@ export const AppLinksContainer = styled.div`
 `;
 
 export const AppLinkImage = styled.img`
-  width: 140px;  /* Set a common width */
-  height: 42px;  /* Set a common height */
+  width: 140px;
+  height: 42px;
   cursor: pointer;
-  object-fit: contain;  /* Ensure image scales while keeping aspect ratio */
+  object-fit: contain;
   transition: transform 0.3s ease;
+
   &:hover {
     transform: scale(1.05);
   }
