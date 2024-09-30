@@ -15,7 +15,6 @@ export const HeroSection = styled.section`
   text-align: center;
   padding: 4rem 2rem;
   position: relative;
-
   background-image: url('https://vwcentral.com.au/media/catalog/product/cache/1/thumbnail/700x/17f82f742ffe127f42dca9de82fb58b1/p/r/pro-pack-5.jpg'); 
   background-position: center;
   background-size: cover; 
@@ -50,6 +49,7 @@ export const CTAButton = styled.button`
   border: none;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
+  margin-top: 62px;
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -74,5 +74,145 @@ export const AppLinkImage = styled.img`
 
   &:hover {
     transform: scale(1.05);
+  }
+`;
+
+export const SupportedVehiclesSection = styled.section`
+  background-color: #252525; /* Background color for the section */
+  padding: 4rem 2rem;
+`;
+
+export const VehiclesTitle = styled.h2`
+  color: #fff; /* Title color */
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+`;
+
+export const VehiclesGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust as needed */
+  gap: 1.5rem; /* Gap between grid items */
+  justify-items: center;
+  justify-content: center; /* Center grid items when fewer than full row */
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row on smaller screens */
+    gap: 1rem; /* Reduced gap for smaller screens */
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on extra small screens */
+    gap: 0.75rem; /* Further reduced gap */
+  }
+`;
+
+export const VehicleImage = styled.img`
+  background-color: #373737; /* Background for individual vehicle images */
+  padding: 6px;
+  border-radius: 8px;
+  width: 150px;
+  height: 150px;
+  object-fit: contain; /* Ensure the images fit within the box */
+
+  @media (max-width: 768px) {
+    width: 100px;
+    height: 100px; /* Reduce image size on smaller screens */
+  }
+
+  @media (max-width: 480px) {
+    width: 80px;
+    height: 80px; /* Further reduce image size on extra small screens */
+  }
+`;
+
+export const VehicleName = styled.p`
+  color: #fff; /* Text color */
+  text-align: center;
+`;
+
+export const HowItWorksSection = styled.section`
+  background-color: #F7F7F7;
+  padding: 4rem 2rem;
+  text-align: center;
+`;
+
+export const HowItWorksTitle = styled.h2`
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+`;
+
+export const StepsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+`;
+
+export const Step = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+`;
+
+export const StepNumber = styled.div`
+  width: 40px;
+  height: 40px;
+  background-color: #0066cc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+`;
+
+export const StepDescription = styled.p`
+  font-size: 1rem;
+  color: #333;
+`;
+
+export const StepArrow = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+`;
+
+export const DotsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+`;
+
+export const Dot = styled.div`
+  width: 10px;
+  height: 10px;
+  background-color: ${(props) => (props.isActive ? '#0066cc' : '#ccc')}; // Active and inactive colors
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
   }
 `;
