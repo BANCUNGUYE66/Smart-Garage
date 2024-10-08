@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <Logo>OBDeleven</Logo>
+      <Logo>Smart Garage</Logo>
       <Nav>
         <NavItem to="/shop">SHOP</NavItem>
         <NavItem to="/features">FEATURES</NavItem>
