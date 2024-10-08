@@ -3,6 +3,8 @@ import { HeaderContainer, Logo, Nav, NavItem, RightSection, UserIcon } from './H
 import { FaUser } from 'react-icons/fa';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import logoImage from './smart-Garage-logo.jpg';
+import { Link } from 'react-router-dom';
+
 
 
 const Header = () => {
@@ -15,8 +17,10 @@ const Header = () => {
   return (
     <HeaderContainer>
       <Logo>
-        <img src={logoImage} alt="Smart Garage Logo" />
-        Smart Garage
+        <Link to="/">
+         <img src={logoImage} alt="Smart Garage Logo" />
+         Smart Garage
+        </Link>
       </Logo>
       <Nav>
         <NavItem to="/shop">SHOP</NavItem>
