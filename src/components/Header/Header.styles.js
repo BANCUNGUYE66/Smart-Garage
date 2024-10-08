@@ -14,18 +14,25 @@ export const HeaderContainer = styled.header`
 `;
 
 export const Logo = styled.div`
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 
-img {
-  width: 60px; 
-  height: auto;
-  margin-right: 0.5rem;
-}
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
 
-font-size: 1.5rem;
-font-weight: bold;
-color: #fff;
+  img {
+    width: 60px;
+    height: auto;
+    margin-right: 0.5rem;
+  }
+
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
 `;
 
 export const Nav = styled.nav`
