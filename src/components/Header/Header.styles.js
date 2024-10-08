@@ -14,8 +14,18 @@ export const HeaderContainer = styled.header`
 `;
 
 export const Logo = styled.div`
-  font-size: 1.5rem;
-  font-weight: bold;
+display: flex;
+align-items: center;
+
+img {
+  width: 60px; 
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+font-size: 1.5rem;
+font-weight: bold;
+color: #fff;
 `;
 
 export const Nav = styled.nav`
@@ -43,6 +53,7 @@ export const RightSection = styled.div`
 export const UserIcon = styled.div`
   cursor: pointer;
   margin-left: 1rem;
+  
 
   @media (max-width: 768px) {
     display: none;
