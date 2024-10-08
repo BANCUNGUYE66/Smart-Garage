@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import carImage from './assets/car.jpg';
 
 export const HomeContainer = styled.div`
   width: 100%;
@@ -13,11 +14,15 @@ export const HeroSection = styled.section`
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem; 
   position: relative;
-  background-image: url('https://vwcentral.com.au/media/catalog/product/cache/1/thumbnail/700x/17f82f742ffe127f42dca9de82fb58b1/p/r/pro-pack-5.jpg'); 
+
+  background-image: url(${carImage});
   background-position: center;
-  background-size: cover; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  min-height: 300px;
   z-index: 1;
 
   &::before {
@@ -27,7 +32,7 @@ export const HeroSection = styled.section`
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(135, 206, 235, 0.6); 
+    background: rgba(135, 206, 235, 0.6);
     backdrop-filter: blur(1px);
     z-index: -1;
   }
