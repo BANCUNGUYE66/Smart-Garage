@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import carImage from './assets/car.jpg';
-import engineFaultsImage from './assets/Functions.webp';
 
 
 export const HomeContainer = styled.div`
