@@ -150,8 +150,8 @@ const steps = [
         <OBDelevenContent>
           <OBDelevenImage src={obdelevenDevice} alt="OBDeleven NextGen Device" />
           <div>
-            <h2>OBDeleven NextGen</h2>
-            <p>OBDeleven NextGen is a pocket-sized Bluetooth device that offers in-depth diagnostics and extensive car customization options. Together with a mobile application, you can quickly scan your vehicle for faults, enable or disable comfort features, monitor live data, and program your car's systems with just a single tap on your smartphone.</p>
+            <h2>OBD2 NextGen</h2>
+            <p>OBD2 NextGen is a pocket-sized Bluetooth device that offers in-depth diagnostics and extensive car customization options. Together with a mobile application, you can quickly scan your vehicle for faults, enable or disable comfort features, monitor live data, and program your car's systems with just a single tap on your smartphone.</p>
             <LearnMoreLink href="#">Learn more →</LearnMoreLink>
           </div>
         </OBDelevenContent>
@@ -195,7 +195,7 @@ const steps = [
       <CommunitySection>
         <CommunityContent>
           <h2>JOIN OUR COMMUNITY</h2>
-          <p>Connect with other OBDeleven users – car enthusiasts and professionals. Receive the latest news, share knowledge and feedback, discuss issues, and get advice and assistance.</p>
+          <p>Connect with other OBD2 users – car enthusiasts and professionals. Receive the latest news, share knowledge and feedback, discuss issues, and get advice and assistance.</p>
           <CTAButton>Visit Forum</CTAButton>
         </CommunityContent>
         <SocialIcons>
