@@ -5,8 +5,6 @@ import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import logoImage from './smart-Garage-logo.jpg';
 import { Link } from 'react-router-dom';
 
-
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -18,13 +16,15 @@ const Header = () => {
     <HeaderContainer>
       <Logo>
         <Link to="/">
-         <img src={logoImage} alt="Smart Garage Logo" />
-         Smart Garage
+          <img src={logoImage} alt="Smart Garage Logo" />
+          Smart Garage
         </Link>
       </Logo>
       <Nav>
-        <NavItem to="/home">HOME</NavItem>
-        <NavItem to="/services">SERVICES/PRODUCT</NavItem>
+        {/* <NavItem to="/home">HOME</NavItem> */}
+        <NavItem  to="/services-page">
+          SERVICES/PRODUCT
+        </NavItem>
       </Nav>
       <RightSection>
         <HamburgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} />

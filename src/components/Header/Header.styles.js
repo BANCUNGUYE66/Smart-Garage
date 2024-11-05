@@ -45,9 +45,10 @@ export const Nav = styled.nav`
 `;
 
 export const NavItem = styled(Link)`
-  color: #fff;
+  color: #fff; // Set the color for both HOME and SERVICES/PRODUCT links
   text-decoration: none;
   margin: 0 1rem;
+  
   &:hover {
     text-decoration: underline;
   }
@@ -61,7 +62,6 @@ export const RightSection = styled.div`
 export const UserIcon = styled.div`
   cursor: pointer;
   margin-left: 1rem;
-  
 
   @media (max-width: 768px) {
     display: none;
