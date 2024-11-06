@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { HeaderContainer, Logo, Nav, NavItem, RightSection, UserIcon } from './Header.styles';
-import { FaUser } from 'react-icons/fa';
+import { HeaderContainer, Logo, Nav, NavItem, RightSection } from './Header.styles';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import logoImage from './smart-Garage-logo.jpg';
 import { Link } from 'react-router-dom';
@@ -21,16 +20,18 @@ const Header = () => {
         </Link>
       </Logo>
       <Nav>
-        {/* <NavItem to="/home">HOME</NavItem> */}
         <NavItem  to="/services-page">
           AI powered App
+        </NavItem>
+        <NavItem  to="/shop">
+          Shop
         </NavItem>
       </Nav>
       <RightSection>
         <HamburgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} />
-        <UserIcon>
+        {/* <UserIcon>
           <FaUser />
-        </UserIcon>
+        </UserIcon> */}
       </RightSection>
     </HeaderContainer>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
-import { HamburgerMenuContainer, IconWrapper, MenuList, MenuItem, Separator, AccountItem } from './HamburgerMenu.styles';
-import { FaBars, FaTimes, FaUser } from 'react-icons/fa';
+import { HamburgerMenuContainer, IconWrapper, MenuList, MenuItem, Separator } from './HamburgerMenu.styles';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const HamburgerMenu = ({ isOpen, toggleMenu }) => {
   return (
@@ -10,14 +11,17 @@ const HamburgerMenu = ({ isOpen, toggleMenu }) => {
         <FaTimes className={`close ${isOpen ? '' : 'hide'}`} />
       </IconWrapper>
       <MenuList isOpen={isOpen}>
-        <MenuItem to="/home">HOME</MenuItem>
+        <MenuItem as={Link} to="/services-page" onClick={toggleMenu}>
+          AI powered App
+        </MenuItem>
+        <MenuItem as={Link} to="/shop" onClick={toggleMenu}>
+          Shop
+        </MenuItem>
         <Separator />
-        <MenuItem to="/services">SERVICES/PRODUCT</MenuItem>
-        <Separator />
-        <AccountItem to="/account">
+        {/* <AccountItem as={Link} to="/account" onClick={toggleMenu}>
           <FaUser />
           ACCOUNT
-        </AccountItem>
+        </AccountItem> */}
       </MenuList>
     </HamburgerMenuContainer>
   );
