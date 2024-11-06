@@ -23,7 +23,7 @@ const Header = () => {
       <Nav>
         {/* <NavItem to="/home">HOME</NavItem> */}
         <NavItem  to="/services-page">
-          SERVICES/PRODUCT
+          AI powered App
         </NavItem>
       </Nav>
       <RightSection>
