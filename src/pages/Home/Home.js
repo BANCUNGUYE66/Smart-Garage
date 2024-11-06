@@ -27,7 +27,6 @@ import {
   OBDelevenSection,
   OBDelevenContent,
   OBDelevenImage,
-  LearnMoreLink,
   CommunitySection,
   CommunityContent,
   SocialIcons,
@@ -157,7 +156,6 @@ const Home = () => {
           <div>
             <h2>OBD2 NextGen</h2>
             <p>OBD2 NextGen is a pocket-sized Bluetooth device that offers in-depth diagnostics and extensive car customization options. Together with a mobile application, you can quickly scan your vehicle for faults, enable or disable comfort features, monitor live data, and program your car's systems with just a single tap on your smartphone.</p>
-            <LearnMoreLink href="#">Learn more →</LearnMoreLink>
           </div>
         </OBDelevenContent>
       </OBDelevenSection>
