@@ -14,7 +14,7 @@ export const IconWrapper = styled.div`
   color: #fff;
   cursor: pointer;
   position: relative;
-  z -index: 1001;
+  z-index: 1001; /* Corrected here */
   width: 24px;
   height: 24px;
 
@@ -33,11 +33,10 @@ export const IconWrapper = styled.div`
 
 export const MenuList = styled.div`
   position: fixed;
-
   top: 20px;
   right: 0;
   width: 250px;
-  height: 16vh;
+  height: 14vh;
   background-color: #000;
   padding-top: 4rem;
   padding-right: 1rem;

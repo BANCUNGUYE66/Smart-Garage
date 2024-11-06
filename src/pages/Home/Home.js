@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   HomeContainer,
   HeroSection,
@@ -67,11 +68,15 @@ const steps = [
   
   const Home = () => {
     const [currentStep, setCurrentStep] = useState(0);
+    const navigate = useNavigate();
   
     const handleDotClick = (index) => {
       setCurrentStep(index);
     };
-  
+
+    const handleShopRedirect = () => {
+      navigate('/shop');
+    };
     return (
       <HomeContainer>
         <HeroSection>
@@ -87,7 +92,7 @@ const steps = [
             </a>
           </AppLinksContainer>
   
-          <CTAButton>Visit shop</CTAButton>
+          <CTAButton onClick={handleShopRedirect}>Visit shop</CTAButton>
         </HeroSection>
 
       <SupportedVehiclesSection>

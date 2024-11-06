@@ -7,8 +7,8 @@ const HamburgerMenu = ({ isOpen, toggleMenu }) => {
   return (
     <HamburgerMenuContainer>
       <IconWrapper onClick={toggleMenu}>
-        <FaBars className={`hamburger ${isOpen ? 'hide' : ''}`} />
-        <FaTimes className={`close ${isOpen ? '' : 'hide'}`} />
+      <FaBars className={`hamburger ${isOpen ? 'hide' : ''}`} />
+      <FaTimes className={`close ${isOpen ? '' : 'hide'}`} />
       </IconWrapper>
       <MenuList isOpen={isOpen}>
         <MenuItem as={Link} to="/services-page" onClick={toggleMenu}>
