@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import carImage from './assets/car.jpg';
 
-
 export const HomeContainer = styled.div`
   width: 100%;
   min-height: 100vh;
@@ -15,7 +14,7 @@ export const HeroSection = styled.section`
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 4rem 2rem; 
+  padding: 4rem 2rem;
   position: relative;
 
   background-image: url(${carImage});
@@ -84,33 +83,46 @@ export const AppLinkImage = styled.img`
 `;
 
 export const SupportedVehiclesSection = styled.section`
-  background-color: #252525; 
+  background-color: #252525;
   padding: 4rem 2rem;
 `;
 
 export const VehiclesTitle = styled.h2`
-  color: #fff; 
+  color: #fff;
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2rem;
 `;
 
 export const VehiclesGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
-  gap: 1.5rem; 
-  justify-items: center;
-  justify-content: center; 
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1.5rem;
+  justify-content: center;
+  padding-bottom: 1rem;
 
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 1rem;
+  &::-webkit-scrollbar {
+    height: 8px;
   }
 
-  @media (max-width: 480px) {
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 0.75rem;
+  &::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
   }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+`;
+
+export const VehicleContainer = styled.div`
+  flex: 0 0 auto;
+  text-align: center;
 `;
 
 export const VehicleImage = styled.img`
@@ -119,21 +131,21 @@ export const VehicleImage = styled.img`
   border-radius: 8px;
   width: 150px;
   height: 150px;
-  object-fit: contain; 
+  object-fit: contain;
 
   @media (max-width: 768px) {
     width: 100px;
-    height: 100px; 
+    height: 100px;
   }
 
   @media (max-width: 480px) {
     width: 80px;
-    height: 80px; 
+    height: 80px;
   }
 `;
 
 export const VehicleName = styled.p`
-  color: #fff; /* Text color */
+  color: #fff;
   text-align: center;
 `;
 
@@ -190,19 +202,6 @@ export const StepDescription = styled.p`
   color: #333;
 `;
 
-export const StepArrow = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-`;
-
 export const DotsContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -212,7 +211,7 @@ export const DotsContainer = styled.div`
 export const Dot = styled.div`
   width: 10px;
   height: 10px;
-  background-color: ${(props) => (props.isActive ? '#0066cc' : '#ccc')}; // Active and inactive colors
+  background-color: ${(props) => (props.isActive ? '#0066cc' : '#ccc')};
   border-radius: 50%;
   margin: 0 5px;
   cursor: pointer;
@@ -222,7 +221,6 @@ export const Dot = styled.div`
     transform: scale(1.2);
   }
 `;
-
 
 export const EngineFaultsSection = styled.section`
   background-color: #252525;
@@ -278,6 +276,7 @@ export const EngineFaultsImage = styled.img`
     max-width: 100%;
   }
 `;
+
 export const OBDelevenSection = styled.section`
   background-color: white;
   padding: 4rem 2rem;
@@ -314,7 +313,6 @@ export const LearnMoreLink = styled.a`
   margin-top: 1rem;
 `;
 
-
 export const CommunitySection = styled.section`
   background-color: #0066cc;
   color: white;
@@ -345,7 +343,7 @@ export const SocialIcons = styled.div`
 
 export const SocialIcon = styled.a`
   margin: 0 0.5rem;
-  
+
   img {
     width: 30px;
     height: 30px;

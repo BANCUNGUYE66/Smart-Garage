@@ -13,6 +13,7 @@ import {
   VehiclesGrid,
   VehicleImage,
   VehicleName,
+  VehicleContainer,
   HowItWorksSection,
   HowItWorksTitle,
   StepsContainer,
@@ -52,104 +53,103 @@ import obdelevenDevice from './assets/obdeleven-device.png';
 import engineFaultsImage from './assets/Functions.webp';
 
 const steps = [
-    {
-      number: '1',
-      description: 'Plug the device into your car\'s OBD2 port',
-    },
-    {
-      number: '2',
-      description: 'Pair with your Smart Car mobile app',
-    },
-    {
-      number: '3',
-      description: 'Enjoy a better driving experience',
-    },
-  ];
-  
-  const Home = () => {
-    const [currentStep, setCurrentStep] = useState(0);
-    const navigate = useNavigate();
-  
-    const handleDotClick = (index) => {
-      setCurrentStep(index);
-    };
+  {
+    number: '1',
+    description: 'Plug the device into your car\'s OBD2 port',
+  },
+  {
+    number: '2',
+    description: 'Pair with your Smart Car mobile app',
+  },
+  {
+    number: '3',
+    description: 'Enjoy a better driving experience',
+  },
+];
 
-    const handleShopRedirect = () => {
-      navigate('/shop');
-    };
-    return (
-      <HomeContainer>
-        <HeroSection>
-          <HeroTitle>PROFESSIONAL CAR DIAGNOSTIC TOOL IN YOUR POCKET</HeroTitle>
-          <HeroSubtitle>Scan your car via Wi-Fi, find nearby garages, and predict maintenance needs using AI</HeroSubtitle>
-  
-          <AppLinksContainer>
-            <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
-              <AppLinkImage src={appStoreIcon} alt="Download on the App Store" />
-            </a>
-            <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
-              <AppLinkImage src={googlePlayIcon} alt="Get it on Google Play" />
-            </a>
-          </AppLinksContainer>
-  
-          <CTAButton onClick={handleShopRedirect}>Visit shop</CTAButton>
-        </HeroSection>
+const Home = () => {
+  const [currentStep, setCurrentStep] = useState(0);
+  const navigate = useNavigate();
+
+  const handleDotClick = (index) => {
+    setCurrentStep(index);
+  };
+
+  const handleShopRedirect = () => {
+    navigate('/shop');
+  };
+
+  return (
+    <HomeContainer>
+      <HeroSection>
+        <HeroTitle>PROFESSIONAL CAR DIAGNOSTIC TOOL IN YOUR POCKET</HeroTitle>
+        <HeroSubtitle>Scan your car via Wi-Fi, find nearby garages, and predict maintenance needs using AI</HeroSubtitle>
+
+        <AppLinksContainer>
+          <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
+            <AppLinkImage src={appStoreIcon} alt="Download on the App Store" />
+          </a>
+          <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
+            <AppLinkImage src={googlePlayIcon} alt="Get it on Google Play" />
+          </a>
+        </AppLinksContainer>
+
+        <CTAButton onClick={handleShopRedirect}>Visit shop</CTAButton>
+      </HeroSection>
 
       <SupportedVehiclesSection>
         <VehiclesTitle>SUPPORTED VEHICLES</VehiclesTitle>
         <VehiclesGrid>
-          <div>
+          <VehicleContainer>
             <VehicleImage src={carBrand1} alt="BMW" />
             <VehicleName>BMW</VehicleName>
-          </div>
-          <div>
+          </VehicleContainer>
+          <VehicleContainer>
             <VehicleImage src={carBrand2} alt="Honda" />
             <VehicleName>Honda</VehicleName>
-          </div>
-          <div>
+          </VehicleContainer>
+          <VehicleContainer>
             <VehicleImage src={carBrand3} alt="Hyundai" />
             <VehicleName>Hyundai</VehicleName>
-          </div>
-          <div>
+          </VehicleContainer>
+          <VehicleContainer>
             <VehicleImage src={carBrand4} alt="Jeep" />
             <VehicleName>Jeep</VehicleName>
-          </div>
-          <div>
+          </VehicleContainer>
+          <VehicleContainer>
             <VehicleImage src={carBrand5} alt="Kia" />
             <VehicleName>Kia</VehicleName>
-          </div>
-          <div>
+          </VehicleContainer>
+          <VehicleContainer>
             <VehicleImage src={carBrand6} alt="Lexus" />
             <VehicleName>Lexus</VehicleName>
-          </div>
-          <div>
+          </VehicleContainer>
+          <VehicleContainer>
             <VehicleImage src={carBrand7} alt="Mercedes-Benz" />
             <VehicleName>Mercedes-Benz</VehicleName>
-          </div>
-          <div>
+          </VehicleContainer>
+          <VehicleContainer>
             <VehicleImage src={carBrand8} alt="Nissan" />
             <VehicleName>Nissan</VehicleName>
-          </div>
-          <div>
+          </VehicleContainer>
+          <VehicleContainer>
             <VehicleImage src={carBrand9} alt="Tesla" />
             <VehicleName>Tesla</VehicleName>
-          </div>
-          <div>
+          </VehicleContainer>
+          <VehicleContainer>
             <VehicleImage src={carBrand10} alt="Toyota" />
             <VehicleName>Toyota</VehicleName>
-          </div>
-          <div>
+          </VehicleContainer>
+          <VehicleContainer>
             <VehicleImage src={carBrand11} alt="Volkswagen" />
             <VehicleName>Volkswagen</VehicleName>
-          </div>
-          <div>
+          </VehicleContainer>
+          <VehicleContainer>
             <VehicleImage src={carBrand12} alt="All Cars" />
             <VehicleName>All Brands</VehicleName>
-          </div>
+          </VehicleContainer>
         </VehiclesGrid>
       </SupportedVehiclesSection>
-
-
 
       <OBDelevenSection>
         <OBDelevenContent>
@@ -162,7 +162,6 @@ const steps = [
         </OBDelevenContent>
       </OBDelevenSection>
 
-
       <EngineFaultsSection>
         <EngineFaultsContent>
           <div>
@@ -174,7 +173,6 @@ const steps = [
           <EngineFaultsImage src={engineFaultsImage} alt="Engine Faults Diagnostic" />
         </EngineFaultsContent>
       </EngineFaultsSection>
-
 
       <HowItWorksSection>
         <HowItWorksTitle>HOW DOES IT WORK?</HowItWorksTitle>
@@ -195,7 +193,6 @@ const steps = [
           ))}
         </DotsContainer>
       </HowItWorksSection>
-
 
       <CommunitySection>
         <CommunityContent>
@@ -221,7 +218,6 @@ const steps = [
           </SocialIcon>
         </SocialIcons>
       </CommunitySection>
-
     </HomeContainer>
   );
 };

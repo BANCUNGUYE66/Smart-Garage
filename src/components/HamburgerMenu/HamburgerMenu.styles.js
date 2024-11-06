@@ -36,7 +36,7 @@ export const MenuList = styled.div`
   top: 20px;
   right: 0;
   width: 250px;
-  height: 14vh;
+  height: 18vh;
   background-color: #000;
   padding-top: 4rem;
   padding-right: 1rem;
